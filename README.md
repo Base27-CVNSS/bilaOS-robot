@@ -98,7 +98,7 @@ Website là HTML/CSS/JavaScript thuần, không cần cài dependency:
 python -m http.server 8000
 ```
 
-Mở `http://localhost:8000`. Mọi push lên `main` sẽ được workflow trong `.github/workflows/pages.yml` đóng gói và triển khai lên GitHub Pages.
+Mở `http://localhost:8000`. GitHub Pages đang xuất bản trực tiếp từ `main / root`; workflow trong `.github/workflows/pages.yml` là nút triển khai thủ công dự phòng.
 
 ## 🤝 Đóng góp
 
