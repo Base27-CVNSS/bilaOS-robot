@@ -59,7 +59,12 @@ LLM **không điều khiển PWM trực tiếp**. Mô hình chỉ được gọi
 | 8. LLM/VLM | Tool calling có allow-list và phê duyệt |
 | 9. Kiểm thử | Bench → sàn trống → hành lang → nhiệm vụ có giám sát |
 
-👉 Mở **[khóa học trực tuyến](https://base27-cvnss.github.io/bilaOS-robot/)** để học từng bước, đánh dấu tiến độ, sao chép mã và làm bài tự kiểm tra.
+| 10. AI cục bộ | Chọn đúng LLM/VLM/VLA, đo bộ nhớ, độ trễ và nhiệt |
+| 11. Agent bridge | So sánh native app, WDA, iPhone Mirroring, MCP và runtime robot |
+| 12. VLA & robot arm | Pose iPhone → IK → demonstration → ACT/BitVLA |
+| 13. Kiểm định | Test ladder, checklist phát hành và tiêu chí fail-closed |
+
+👉 Mở **[khóa học trực tuyến](https://base27-cvnss.github.io/bilaOS-robot/)** để học 14 bài từng bước, đánh dấu tiến độ, sao chép mã và làm bài tự kiểm tra.
 
 ## 🧪 Mã mẫu
 
@@ -68,7 +73,7 @@ LLM **không điều khiển PWM trực tiếp**. Mô hình chỉ được gọi
 
 Mã mẫu được viết để giải thích kiến trúc. Trước khi nối động cơ thật, hãy thay chân GPIO, hệ số PWM, cực tính và giới hạn dòng theo phần cứng của bạn.
 
-## 🧭 10 nguồn tham khảo được dùng đúng vai trò
+## 🧭 30 nguồn tham khảo được dùng đúng vai trò
 
 | Nguồn | Giá trị đưa vào BilaOS | Không nên hiểu nhầm |
 |---|---|---|
@@ -82,6 +87,8 @@ Mã mẫu được viết để giải thích kiến trúc. Trước khi nối �
 | [phone-harness](https://github.com/ShawnPana/phone-harness) | Điều khiển iPhone qua iPhone Mirroring, OCR và HID | Phụ thuộc Mac; không thay thế app robot native |
 | [BitVLA-CoreAI](https://huggingface.co/mlboydaisuke/BitVLA-CoreAI) | VLA on-device dự đoán hành động 7-DoF cho thao tác | Phù hợp end-effector, không phải bộ điều hướng 2WD hoàn chỉnh |
 | [Awesome-LLM-Robotics](https://github.com/GT-RIPL/Awesome-LLM-Robotics) | Bản đồ tài liệu về reasoning, planning, navigation, safety | Danh mục nghiên cứu, không phải repo robot chạy ngay |
+
+Danh sách mở rộng đã được chuẩn hóa URL, loại trùng và phân nhóm thành: robot lõi, cầu nối iPhone, AI cục bộ, runtime, thị giác, nghiên cứu và tư liệu lịch sử. Xem **[SOURCES.md](SOURCES.md)** để đọc đủ 30 nguồn cùng giá trị sử dụng và giới hạn của từng nguồn.
 
 ## 🛠️ Phát triển website
 
