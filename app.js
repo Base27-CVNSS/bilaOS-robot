@@ -160,6 +160,22 @@
     });
   });
 
+  // Research source atlas filters.
+  const sourceCards = [...document.querySelectorAll(".source-grid [data-category]")];
+  document.querySelectorAll("[data-source-filter]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.sourceFilter;
+      document.querySelectorAll("[data-source-filter]").forEach((item) => {
+        const selected = item === button;
+        item.classList.toggle("active", selected);
+        item.setAttribute("aria-pressed", String(selected));
+      });
+      sourceCards.forEach((card) => {
+        card.classList.toggle("source-hidden", filter !== "all" && card.dataset.category !== filter);
+      });
+    });
+  });
+
   // Copy buttons, with a fallback for non-secure localhost contexts.
   const copyText = async (text) => {
     if (navigator.clipboard?.writeText) return navigator.clipboard.writeText(text);
