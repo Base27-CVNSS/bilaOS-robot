@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BilaOS Robot — Sổ tay DIY robot tự hành bằng iPhone &amp; LLM</title>
+  <meta name="description" content="Khóa học tiếng Việt từ A đến Z: biến iPhone thành bộ não robot tự hành với ARKit, BLE, WebRTC, LLM/VLA và lớp an toàn chuyển động.">
+  <meta name="theme-color" content="#07111f">
+  <meta name="author" content="Long Ngo">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:title" content="BilaOS Robot — iPhone thành robot tự hành">
+  <meta property="og:description" content="Sổ tay DIY từng bước: cơ khí, nguồn, BLE, ARKit, WebRTC, LLM và an toàn.">
+  <meta property="og:url" content="https://base27-cvnss.github.io/bilaOS-robot/">
+  <meta property="og:image" content="https://base27-cvnss.github.io/bilaOS-robot/assets/logo.svg">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://base27-cvnss.github.io/bilaOS-robot/">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "BilaOS Robot — Sổ tay DIY robot tự hành bằng iPhone và LLM",
+    "description": "Khóa học tiếng Việt từ A đến Z về robot hai bánh dùng iPhone, ARKit, BLE, WebRTC và LLM.",
+    "inLanguage": "vi",
+    "isAccessibleForFree": true,
+    "provider": {"@type": "Person", "name": "Long Ngo"},
+    "url": "https://base27-cvnss.github.io/bilaOS-robot/"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#course">Bỏ qua đến nội dung khóa học</a>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="BilaOS Robot — về đầu trang">
+      <img src="assets/logo.svg" alt="" width="38" height="38">
+      <span><b>BilaOS</b><small>ROBOT COOKBOOK</small></span>
+    </a>
+    <nav class="topnav" aria-label="Điều hướng chính">
+      <a href="#roadmap">Lộ trình</a>
+      <a href="#architecture">Kiến trúc</a>
+      <a href="#references">Nguồn mở</a>
+      <a href="#quiz">Tự kiểm tra</a>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-button" id="searchToggle" type="button" aria-label="Tìm trong bài học" title="Tìm kiếm">⌕</button>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="Đổi giao diện sáng tối" title="Sáng / tối">◐</button>
+      <a class="github-button" href="https://github.com/Base27-CVNSS/bilaOS-robot">GitHub ↗</a>
+    </div>
+  </header>
+
+  <div class="search-panel" id="searchPanel" hidden>
+    <label for="courseSearch">Tìm nhanh trong 12 bài học</label>
+    <div class="search-row">
+      <input id="courseSearch" type="search" placeholder="Ví dụ: BLE, ARKit, WebRTC, watchdog…" autocomplete="off">
+      <button id="closeSearch" type="button">Đóng</button>
+    </div>
+    <p id="searchResult" aria-live="polite">Nhập từ khóa để lọc nội dung.</p>
+  </div>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> KHÓA HỌC MỞ · TIẾNG VIỆT · DIY</p>
+        <h1>Biến iPhone thành<br><em>bộ não của robot.</em></h1>
+        <p class="hero-lead">Một sổ tay “nấu ăn” từng bước để xây robot tự hành có thể nhìn, nghe, lập bản đồ, nhận nhiệm vụ bằng ngôn ngữ tự nhiên và điều khiển từ xa—mà vẫn giữ an toàn chuyển động ngoài quyền quyết định trực tiếp của LLM.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#lesson-0">Bắt đầu bài 0 <span>→</span></a>
+          <a class="button secondary" href="#roadmap">Xem lộ trình 12 bài</a>
+        </div>
+        <div class="hero-facts" aria-label="Thông tin khóa học">
+          <div><strong>12</strong><span>bài thực hành</span></div>
+          <div><strong>03</strong><span>cấu hình DIY</span></div>
+          <div><strong>10</strong><span>nguồn mở</span></div>
+          <div><strong>0₫</strong><span>học &amp; tải mã</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Minh họa các lớp của robot">
+        <div class="radar radar-a"></div>
+        <div class="radar radar-b"></div>
+        <div class="phone-card">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <span class="live-pill">● AR SESSION</span>
+            <div class="scan-grid"></div>
+            <div class="target target-a">A</div>
+            <div class="target target-b">B</div>
+            <div class="robot-face"><i></i><i></i><b></b></div>
+            <div class="telemetry"><span>POSE</span><b>x 1.24 · z −0.62</b></div>
+          </div>
+        </div>
+        <div class="chassis">
+          <div class="deck"><span>BLE</span><b>SAFETY GATE</b><span>50 Hz</span></div>
+          <i class="wheel left"></i><i class="wheel right"></i>
+        </div>
+        <span class="float-tag tag-one">LiDAR / RGB</span>
+        <span class="float-tag tag-two">LLM tools</span>
+        <span class="float-tag tag-three">Motor watchdog</span>
+      </div>
+    </section>
+
+    <section class="notice-band" aria-label="Cảnh báo an toàn">
+      <div class="shell notice-inner">
+        <b>⚠ An toàn trước AI</b>
+        <p>Thử khi bánh xe được kê khỏi sàn · dùng nút cắt nguồn vật lý · không chạy gần người, vật nuôi, cầu thang hoặc đường giao thông.</p>
+        <a href="#safety">Mở checklist →</a>
+      </div>
+    </section>
+
+    <section class="section shell" id="roadmap">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="kicker">LỘ TRÌNH HỌC</p>
+          <h2>Từ hộp linh kiện đến nhiệm vụ tự hành</h2>
+        </div>
+        <div class="progress-card">
+          <div><span>Tiến độ của bạn</span><b id="progressText">0/12 bài</b></div>
+          <div class="progress-track"><i id="progressBar"></i></div>
+          <button id="resetProgress" type="button">Đặt lại</button>
+        </div>
+      </div>
+
+      <div class="roadmap-grid">
+        <article><span>00</span><b>Đọc bản chất</b><p>Tự hành ≠ teleop ≠ agent điều khiển UI.</p></article>
+        <article><span>01</span><b>Chọn cấu hình</b><p>Mini 2WD, RoBart nâng cao hoặc robot arm.</p></article>
+        <article><span>02</span><b>Lập BOM</b><p>iPhone, MCU BLE, driver, nguồn và E-stop.</p></article>
+        <article><span>03</span><b>Lắp &amp; đi dây</b><p>Tách nguồn logic, nguồn động cơ và mass chung.</p></article>
+        <article><span>04</span><b>Motor Guard</b><p>TTL, sequence, watchdog và fail-closed.</p></article>
+        <article><span>05</span><b>Ứng dụng iOS</b><p>ARSession, BLE central và manual control.</p></article>
+        <article><span>06</span><b>Nhận thức</b><p>Pose 6DoF, mặt sàn, mesh và occupancy grid.</p></article>
+        <article><span>07</span><b>Navigation</b><p>Goal → planner → trajectory → feedback.</p></article>
+        <article><span>08</span><b>Teleoperation</b><p>WebRTC, dead-man và đường dừng ưu tiên.</p></article>
+        <article><span>09</span><b>LLM tools</b><p>Ý định cấp cao, allow-list và approval.</p></article>
+        <article><span>10</span><b>VLA / cánh tay</b><p>Imitation learning và hành động 7-DoF.</p></article>
+        <article><span>11</span><b>Kiểm định</b><p>Test theo tầng trước khi chạy nhiệm vụ thật.</p></article>
+      </div>
+    </section>
+
+    <section class="section shell" id="architecture">
+      <div class="section-heading">
+        <p class="kicker">BẢN CHẤT KIẾN TRÚC</p>
+        <h2>Một robot tốt không phải là “LLM nối vào motor”</h2>
+        <p>Mỗi lớp chỉ nhận quyền tối thiểu. Đường dừng khẩn ngắn hơn đường ra quyết định AI.</p>
+      </div>
+      <div class="architecture">
+        <div class="arch-column">
+          <span class="arch-label">CON NGƯỜI</span>
+          <div class="arch-node cyan"><b>Operator</b><small>Web · giọng nói · nút dừng</small></div>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-column">
+          <span class="arch-label">IPHONE</span>
+          <div class="arch-node blue"><b>Perception</b><small>Camera · ARKit · audio</small></div>
+          <div class="arch-node blue"><b>BilaOS State</b><small>Goal · mode · map · audit</small></div>
+          <div class="arch-node blue"><b>Safety Gate</b><small>Clamp · geofence · TTL</small></div>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-column">
+          <span class="arch-label">THỜI GIAN THỰC</span>
+          <div class="arch-node green"><b>BLE MCU</b><small>Sequence · watchdog</small></div>
+          <div class="arch-node green"><b>Motor driver</b><small>PWM · current limit</small></div>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-column">
+          <span class="arch-label">THẾ GIỚI THẬT</span>
+          <div class="arch-node amber"><b>2WD chassis</b><small>Wheels · battery · E-stop</small></div>
+        </div>
+        <div class="llm-orbit"><b>LLM / VLM</b><small>Chỉ đề xuất tool cấp cao</small></div>
+      </div>
+      <div class="principle-grid">
+        <article><span>01</span><b>LLM không nằm trong vòng điều khiển cứng</b><p>PID, watchdog và E-stop phải hoạt động dù API mất mạng hoặc mô hình trả lời sai.</p></article>
+        <article><span>02</span><b>Điều khiển là state machine</b><p>`disarmed → manual → autonomous`; mọi chuyển trạng thái đều có điều kiện và nhật ký.</p></article>
+        <article><span>03</span><b>Lỗi phải dẫn về trạng thái dừng</b><p>Gói trễ, sequence lặp, TTL hết hạn, BLE rớt hoặc app nền hóa đều trả vận tốc về 0.</p></article>
+      </div>
+    </section>
+
+    <section class="course-shell shell" id="course">
+      <aside class="course-nav" aria-label="Mục lục bài học">
+        <div class="course-nav-head">
+          <span>NỘI DUNG</span><b>12 bài</b>
+        </div>
+        <ol>
+          <li><a href="#lesson-0"><span>00</span> Hiểu đúng bài toán</a></li>
+          <li><a href="#lesson-1"><span>01</span> Chọn cấu hình</a></li>
+          <li><a href="#lesson-2"><span>02</span> Danh sách linh kiện</a></li>
+          <li><a href="#lesson-3"><span>03</span> Lắp ráp &amp; nguồn</a></li>
+          <li><a href="#lesson-4"><span>04</span> Motor Guard</a></li>
+          <li><a href="#lesson-5"><span>05</span> Ứng dụng iPhone</a></li>
+          <li><a href="#lesson-6"><span>06</span> ARKit &amp; bản đồ</a></li>
+          <li><a href="#lesson-7"><span>07</span> Navigation</a></li>
+          <li><a href="#lesson-8"><span>08</span> Điều khiển từ xa</a></li>
+          <li><a href="#lesson-9"><span>09</span> LLM/VLM tools</a></li>
+          <li><a href="#lesson-10"><span>10</span> VLA &amp; robot arm</a></li>
+          <li><a href="#lesson-11"><span>11</span> Kiểm thử &amp; nâng cấp</a></li>
+        </ol>
+        <div class="nav-help"><b>Quy tắc vàng</b><p>Nếu bạn chưa chứng minh robot tự dừng khi mất kết nối, chưa được phép bật chế độ tự hành.</p></div>
+      </aside>
+
+      <div class="lessons">
+        <article class="lesson" id="lesson-0" data-title="Hiểu đúng bài toán tự hành teleoperation agent UI">
+          <header class="lesson-header">
+            <div><span>BÀI 00 · 15 PHÚT</span><h2>Hiểu đúng thứ bạn đang xây</h2></div>
+            <label class="complete"><input class="lesson-check" data-lesson="0" type="checkbox"> <span>Đã hoàn thành</span></label>
+          </header>
+          <p class="lesson-lead">Danh sách 10 nguồn không phải 10 robot tự hành hoàn chỉnh. Chúng tạo thành một “hộp linh kiện tri thức” cho nhiều lớp khác nhau.</p>
+          <div class="definition-grid">
+            <div><b>Teleoperation</b><p>Người lái gửi lệnh, robot phản hồi. WebRTC RoBart là ví dụ đúng lớp này.</p></div>
+            <div><b>Autonomy</b><p>Robot ước lượng vị trí, lập bản đồ, lập đường và tự bám đường tới mục tiêu.</p></div>
+            <div><b>Phone automation</b><p>Agent chạm, gõ, đọc UI iPhone; không đồng nghĩa với điều khiển cơ cấu vật lý.</p></div>
+            <div><b>Embodied AI</b><p>Mô hình nhận quan sát và đề xuất hành động, nhưng vẫn cần runtime an toàn bao quanh.</p></div>
+          </div>
+          <div class="callout info"><b>Đầu ra bài học</b><p>Viết một câu mục tiêu đo được, ví dụ: “Robot đi từ điểm A tới B trong phòng trống 3 × 4 m, tốc độ ≤ 0,25 m/s, tự dừng khi mất BLE trong 650 ms.”</p></div>
+        </article>
+
+        <article class="lesson" id="lesson-1" data-title="Chọn cấu hình Mini RoBart robot arm cánh tay">
+          <header class="lesson-header">
+            <div><span>BÀI 01 · 20 PHÚT</span><h2>Chọn một cấu hình, đừng trộn cả ba</h2></div>
+            <label class="complete"><input class="lesson-check" data-lesson="1" type="checkbox"> <span>Đã hoàn thành</span></label>
+          </header>
+          <div class="profile-selector" role="radiogroup" aria-label="Chọn cấu hình robot">
+            <button class="profile active" type="button" data-profile="mini" aria-pressed="true"><span>Khuyên dùng</span><b>Mini 2WD</b><small>Chậm, điện áp thấp, học đủ pipeline</small></button>
+            <button class="profile" type="button" data-profile="robart" aria-pressed="false"><span>Nâng cao</span><b>RoBart-style</b><small>Đế lớn, LiDAR, tải trọng và rủi ro cao</small></button>
+            <button class="profile" type="button" data-profile="arm" aria-pressed="false"><span>Nhánh riêng</span><b>Robot arm</b><small>Teleop pose, ACT và VLA 7-DoF</small></button>
+          </div>
+          <div class="profile-output" id="profileOutput" aria-live="polite">
+            <div><span>Mục tiêu</span><b>Đế hai bánh trong nhà</b></div>
+            <div><span>Điện áp</span><b>Ưu tiên ≤ 12 V</b></div>
+            <div><span>Điều khiển</span><b>iPhone → BLE MCU</b></div>
+            <div><span>Mốc đầu tiên</span><b>Manual drive + watchdog</b></div>
+          </div>
+          <div class="callout warning"><b>Không khuyên người mới dùng hoverboard</b><p>Năng lượng, khối lượng và mô-men lớn làm hậu quả lỗi nghiêm trọng hơn. Hãy chứng minh toàn bộ stack trên mini 2WD trước.</p></div>
+        </article>
+
+        <article class="lesson" id="lesson-2" data-title="BOM linh kiện iPhone LiDAR ESP32 nRF52840 TB6612 driver pin nguồn">
+          <header class="lesson-header">
+            <div><span>BÀI 02 · 30 PHÚT</span><h2>Danh sách nguyên liệu cho Mini 2WD</h2></div>
+            <label class="complete"><input class="lesson-check" data-lesson="2" type="checkbox"> <span>Đã hoàn thành</span></label>
+          </header>
+          <p class="lesson-lead">Chọn linh kiện theo thông số điện, không theo tên quảng cáo. Dòng kẹt của động cơ phải nằm trong khả năng driver và cầu chì.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Nhóm</th><th>Thành phần</th><th>Tiêu chí chọn</th><th>Bắt buộc</th></tr></thead>
+              <tbody>
+                <tr><td>📱 Compute</td><td>iPhone hỗ trợ ARKit</td><td>Pro + LiDAR hữu ích cho scene mesh; máy thường vẫn học pose/camera</td><td>Có</td></tr>
+                <tr><td>💻 Build</td><td>Mac + Xcode</td><td>Cần cho app iOS native và ký cài lên iPhone</td><td>Có*</td></tr>
+                <tr><td>🔵 Realtime</td><td>ESP32 hoặc nRF52840</td><td>BLE ổn định, watchdog độc lập, đủ chân PWM</td><td>Có</td></tr>
+                <tr><td>⚙ Motion</td><td>Khung 2WD + 2 motor giảm tốc</td><td>Tốc độ thấp; có encoder là lợi thế lớn</td><td>Có</td></tr>
+                <tr><td>🔌 Driver</td><td>Dual H-bridge</td><td>Dòng liên tục và dòng đỉnh lớn hơn tải đo được</td><td>Có</td></tr>
+                <tr><td>🔋 Power</td><td>Pin, cầu chì, công tắc</td><td>Đúng điện áp; đầu nối chống cắm ngược</td><td>Có</td></tr>
+                <tr><td>🛑 Safety</td><td>Nút E-stop cắt nguồn motor</td><td>Tiếp cận được từ bên ngoài, không phụ thuộc phần mềm</td><td>Có</td></tr>
+                <tr><td>🧩 Mechanical</td><td>Giá iPhone + bumper</td><td>Chắc, không che camera, trọng tâm thấp</td><td>Có</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="fineprint">* `phone-harness` có thể tự động hóa iPhone qua iPhone Mirroring mà không cần Xcode, nhưng vẫn cần Mac và không thay thế ứng dụng BLE/ARKit native của robot.</p>
+          <details class="recipe"><summary><span>Checklist trước khi mua</span><b>6 câu hỏi</b></summary><ol><li>Dòng kẹt mỗi motor là bao nhiêu?</li><li>Driver chịu được hai motor đồng thời không?</li><li>Pin có BMS và cầu chì đúng mức không?</li><li>MCU dùng mức logic 3,3 V hay 5 V?</li><li>iPhone được cố định nhưng tháo nhanh được không?</li><li>Bạn có thể cắt nguồn motor mà không cần mở app không?</li></ol></details>
+        </article>
+
+        <article class="lesson" id="lesson-3" data-title="Lắp ráp dây điện nguồn motor logic mass chung e-stop cầu chì">
+          <header class="lesson-header">
+            <div><span>BÀI 03 · 45 PHÚT</span><h2>Lắp cơ khí và đi dây theo đường năng lượng</h2></div>
+            <label class="complete"><input class="lesson-check" data-lesson="3" type="checkbox"> <span>Đã hoàn thành</span></label>
+          </header>
+          <div class="wiring-flow" aria-label="Luồng đi dây">
+            <div class="power"><span>01</span><b>PIN</b><small>Đúng điện áp</small></div><i>→</i>
+            <div class="power"><span>02</span><b>CẦU CHÌ</b><small>Gần pin</small></div><i>→</i>
+            <div class="danger"><span>03</span><b>E-STOP</b><small>Cắt motor</small></div><i>→</i>
+            <div><span>04</span><b>DRIVER</b><small>H-bridge</small></div><i>→</i>
+            <div><span>05</span><b>MOTOR</b><small>Trái / phải</small></div>
+          </div>
+          <ol class="steps">
+            <li><b>Lắp khung không điện.</b><p>Đặt pin thấp, iPhone gần trục quay; kiểm tra bánh quay tự do và dây không chạm bánh.</p></li>
+            <li><b>Tách nhánh công suất và logic.</b><p>Nguồn motor đi qua cầu chì + E-stop; MCU dùng bộ hạ áp phù hợp. Nối mass chung tại điểm rõ ràng.</p></li>
+            <li><b>Kiểm tra bằng đồng hồ.</b><p>Đo cực tính, điện áp không tải và continuity trước khi cắm MCU/iPhone.</p></li>
+            <li><b>Test từng motor ở tốc độ thấp.</b><p>Kê bánh khỏi sàn, chạy 10–15%, xác nhận chiều trái/phải rồi dán nhãn dây.</p></li>
+          </ol>
+          <div class="callout danger"><b>Tuyệt đối không cấp iPhone trực tiếp từ đường motor</b><p>Nhiễu và xung ngược có thể làm reset hoặc hỏng thiết bị. Dùng bộ nguồn/charger được chứng nhận và quản lý cáp tách khỏi cơ cấu quay.</p></div>
+        </article>
+
+        <article class="lesson" id="lesson-4" data-title="Motor Guard firmware TTL watchdog sequence BLE serial STOP fail closed">
+          <header class="lesson-header">
+            <div><span>BÀI 04 · 60 PHÚT</span><h2>Motor Guard: dạy robot biết dừng trước khi biết đi</h2></div>
+            <label class="complete"><input class="lesson-check" data-lesson="4" type="checkbox"> <span>Đã hoàn thành</span></label>
+          </header>
+          <p class="lesson-lead">MCU chỉ chấp nhận gói mới hơn, trong trạng thái đã ARM và có TTL hợp lệ. Không có gói mới đồng nghĩa vận tốc bằng 0.</p>
+          <div class="code-window">
+            <div class="code-title"><span><i></i><i></i><i></i> PROTOCOL.TXT</span><button class="copy-button" type="button">Sao chép</button></div>
+            <pre><code>ARM 41
+DRV 42 20 20 250
+DRV 43 18 22 250
+PING 44
+STOP 45
+
+# sequence phải tăng
+# left/right: -100..100, firmware tự clamp
+# ttl_ms: 50..500, hết hạn =&gt; STOP</code></pre>
+          </div>
+          <div class="test-grid">
+            <article><b>Test A · mất kết nối</b><p>Đang chạy 15%, ngắt BLE/Serial. Motor phải về 0 trong giới hạn watchdog đã công bố.</p></article>
+            <article><b>Test B · replay</b><p>Gửi lại sequence cũ. Firmware từ chối, không lặp chuyển động.</p></article>
+            <article><b>Test C · TTL sai</b><p>Gửi TTL ngoài 50–500 ms. Firmware dừng và hủy ARM.</p></article>
+            <article><b>Test D · E-stop</b><p>Ấn nút vật lý ở mọi trạng thái. Nguồn motor bị cắt, không chờ vòng lặp AI.</p></article>
+          </div>
+          <p><a class="text-link" href="examples/MotorGuard.ino">Mở toàn bộ firmware mẫu `MotorGuard.ino` →</a></p>
+        </article>
+
+        <article class="lesson" id="lesson-5" data-title="Ứng dụng iOS SwiftUI CoreBluetooth ARSession manual joystick BLE central">
+          <header class="lesson-header">
+            <div><span>BÀI 05 · 90 PHÚT</span><h2>Ứng dụng iPhone: ba dịch vụ, một state machine</h2></div>
+            <label class="complete"><input class="lesson-check" data-lesson="5" type="checkbox"> <span>Đã hoàn thành</span></label>
+          </header>
+          <div class="component-list">
+            <div><span>01</span><div><b>ARSessionManager</b><p>Phát camera frame, pose 6DoF, plane/mesh và tracking quality.</p></div></div>
+            <div><span>02</span><div><b>RobotLink</b><p>CoreBluetooth central; encode command, sequence, ACK và link age.</p></div></div>
+            <div><span>03</span><div><b>RobotCoordinator</b><p>Sở hữu mode, SafetyContext, audit log và quyền ưu tiên STOP.</p></div></div>
+          </div>
+          <div class="state-line" aria-label="State machine"><b>DISARMED</b><i>operator ARM</i><b>MANUAL</b><i>validated goal</i><b>AUTONOMOUS</b><i class="stop">bất kỳ lỗi</i><b>E-STOP</b></div>
+          <ol class="steps compact">
+            <li><b>Tạo project SwiftUI.</b><p>Bật camera, microphone/Bluetooth usage descriptions đúng mục đích.</p></li>
+            <li><b>Kết nối BLE nhưng chưa nối motor.</b><p>Ghi log `ARM/DRV/STOP`; đo nhịp 20–50 Hz và độ tuổi gói.</p></li>
+            <li><b>Làm manual UI trước.</b><p>Joystick tự về tâm, nút STOP luôn nổi, app mất active phải gửi STOP.</p></li>
+            <li><b>Chỉ sau đó mới gắn bánh.</b><p>Giới hạn 10–20% tốc độ cho lần chạy sàn đầu tiên.</p></li>
+          </ol>
+        </article>
+
+        <article class="lesson" id="lesson-6" data-title="ARKit SLAM LiDAR scene mesh floor occupancy grid pose tracking">
+          <header class="lesson-header">
+            <div><span>BÀI 06 · 90 PHÚT</span><h2>Từ ARKit pose đến bản đồ có thể chạy</h2></div>
+            <label class="complete"><input class="lesson-check" data-lesson="6" type="checkbox"> <span>Đã hoàn thành</span></label>
+          </header>
+          <div class="pipeline">
+            <div><span>INPUT</span><b>RGB / LiDAR</b><small>ARFrame + intrinsics</small></div><i>→</i>
+            <div><span>LOCALIZE</span><b>6DoF pose</b><small>x, y, z + rotation</small></div><i>→</i>
+            <div><span>PROJECT</span><b>2D grid</b><small>free / occupied / unknown</small></div><i>→</i>
+            <div><span>PLAN</span><b>Safe path</b><small>inflated obstacles</small></div>
+          </div>
+          <h3>Công thức tối thiểu</h3>
+          <div class="formula"><span>ô lưới</span><b>g<sub>x</sub> = ⌊(x − x₀) / r⌋ &nbsp; · &nbsp; g<sub>z</sub> = ⌊(z − z₀) / r⌋</b><small>`r` là độ phân giải; hãy nở vật cản thêm bán kính robot + biên an toàn.</small></div>
+          <ul class="checks">
+            <li>Không lập đường qua vùng `unknown` ở chế độ người mới.</li>
+            <li>Khi ARKit tracking là `limited`, hạ tốc độ hoặc STOP.</li>
+            <li>Không dùng ảnh đơn lẻ để suy ra khoảng cách nếu chưa có depth/geometry tin cậy.</li>
+            <li>Lưu map frame và robot frame rõ ràng; lỗi quy ước trục là nguyên nhân quay/ngược phổ biến.</li>
+          </ul>
+          <div class="callout info"><b>RoBart giúp ta thấy gì?</b><p>RoBart dùng ARKit scene meshing, chiếu đỉnh mesh xuống lưới chiếm chỗ và chú thích ảnh bằng các điểm có thể đi. Đây là mẫu ghép perception với khả năng hành động rất đáng học, nhưng tác giả cũng ghi rõ motion planning hiện còn cần cải thiện.</p></div>
+        </article>
+
+        <article class="lesson" id="lesson-7" data-title="Navigation planner path follower PID encoder goal obstacle map autonomous">
+          <header class="lesson-header">
+            <div><span>BÀI 07 · 120 PHÚT</span><h2>Navigation: tách “đi đâu” khỏi “quay bánh thế nào”</h2></div>
+            <label class="complete"><input class="lesson-check" data-lesson="7" type="checkbox"> <span>Đã hoàn thành</span></label>
+          </header>
+          <div class="layer-table">
+            <div><span>1–5 s</span><b>Task planner</b><p>LLM biến “kiểm tra cửa bếp” thành goal có điều kiện hoàn thành.</p></div>
+            <div><span>2–10 Hz</span><b>Path planner</b><p>A*/Dijkstra trên occupancy grid đã inflation; lập lại khi map đổi.</p></div>
+            <div><span>20–50 Hz</span><b>Path follower</b><p>Pure pursuit/PID đổi waypoint thành v, ω có giới hạn.</p></div>
+            <div><span>MCU loop</span><b>Motor control</b><p>Đổi v, ω thành left/right; encoder cải thiện sai số trượt.</p></div>
+          </div>
+          <div class="code-window">
+            <div class="code-title"><span><i></i><i></i><i></i> SAFETY PSEUDOCODE</span><button class="copy-button" type="button">Sao chép</button></div>
+            <pre><code>if trackingQuality != .normal: stop("tracking")
+if obstacleDistance &lt; safetyEnvelope: stop("obstacle")
+if operatorDeadman == false: stop("operator")
+
+goal = clampToGeofence(requestedGoal)
+path = plan(grid.inflate(robotRadius + margin), pose, goal)
+for segment in path.chunk(maxLength: 0.5):
+    requireFreshMap()
+    follow(segment, maxSpeed: 0.25)</code></pre>
+          </div>
+          <div class="callout warning"><b>Không encoder vẫn có thể demo, nhưng không nên tin quãng đường bánh xe</b><p>Pose ARKit là phản hồi hữu ích, song có độ trễ và có thể mất tracking. Encoder + ARKit tạo hai nguồn quan sát độc lập tốt hơn.</p></div>
+        </article>
+
+        <article class="lesson" id="lesson-8" data-title="WebRTC teleoperation remote control video data channel dead man TURN VPN">
+          <header class="lesson-header">
+            <div><span>BÀI 08 · 90 PHÚT</span><h2>Điều khiển từ xa qua WebRTC, local-first</h2></div>
+            <label class="complete"><input class="lesson-check" data-lesson="8" type="checkbox"> <span>Đã hoàn thành</span></label>
+          </header>
+          <div class="remote-layout">
+            <div class="browser-frame"><div class="browser-bar"><i></i><i></i><i></i><span>operator.local</span></div><div class="video-placeholder"><span>LIVE · 720p</span><b>CAMERA FEED</b><div class="crosshair"></div></div><div class="control-pad"><button aria-label="Tiến">↑</button><button aria-label="Trái">←</button><button class="estop-demo" id="estopDemo" aria-label="Dừng khẩn mô phỏng">STOP</button><button aria-label="Phải">→</button><button aria-label="Lùi">↓</button></div></div>
+            <div class="remote-rules">
+              <h3>Đường dữ liệu</h3>
+              <ol><li><b>Video track</b><span>iPhone → operator</span></li><li><b>Data channel</b><span>intent + sequence + timestamp</span></li><li><b>Safety Gate</b><span>iPhone xác minh và clamp</span></li><li><b>BLE</b><span>lệnh ngắn hạn tới MCU</span></li></ol>
+              <div class="system-status" id="systemStatus"><i></i><span>Demo: hệ thống sẵn sàng</span></div>
+            </div>
+          </div>
+          <ul class="checks two-col">
+            <li>Dead-man: thả nút/ẩn tab/mất focus ⇒ STOP.</li>
+            <li>Không mở cổng motor trực tiếp ra Internet.</li>
+            <li>Dùng kết nối riêng hoặc HTTPS + xác thực mạnh.</li>
+            <li>TURN credential ngắn hạn; không hard-code secret trong app.</li>
+            <li>Timestamp quá cũ ⇒ bỏ gói, không “phát lại” lệnh lái.</li>
+            <li>Manual STOP luôn ưu tiên hơn autonomous command.</li>
+          </ul>
+        </article>
+
+        <article class="lesson" id="lesson-9" data-title="LLM VLM tool calling JSON schema prompt injection approval allow list safety gate">
+          <header class="lesson-header">
+            <div><span>BÀI 09 · 90 PHÚT</span><h2>Gắn LLM/VLM bằng tool calling có rào chắn</h2></div>
+            <label class="complete"><input class="lesson-check" data-lesson="9" type="checkbox"> <span>Đã hoàn thành</span></label>
+          </header>
+          <p class="lesson-lead">Mô hình nhận mục tiêu, ảnh đã chọn lọc và trạng thái bản đồ; đầu ra chỉ là đề xuất gọi công cụ có schema.</p>
+          <div class="code-window">
+            <div class="code-title"><span><i></i><i></i><i></i> TOOL SCHEMA</span><button class="copy-button" type="button">Sao chép</button></div>
+            <pre><code>{
+  "name": "drive_meters",
+  "description": "Di chuyển một đoạn ngắn trong vùng đã lập bản đồ",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "distance": {"type": "number", "minimum": -1.5, "maximum": 1.5},
+      "max_speed": {"type": "number", "minimum": 0.05, "maximum": 0.25},
+      "reason": {"type": "string", "maxLength": 120}
+    },
+    "required": ["distance", "max_speed", "reason"],
+    "additionalProperties": false
+  }
+}</code></pre>
+          </div>
+          <div class="guardrail-grid">
+            <article><span>ALLOW-LIST</span><b>5 tools là đủ</b><p>`observe_scene`, `rotate_degrees`, `drive_meters`, `go_to_map_point`, `stop_robot`.</p></article>
+            <article><span>VALIDATE</span><b>Không tin JSON</b><p>Parse, type-check, clamp, kiểm mode/map/link và từ chối field lạ.</p></article>
+            <article><span>APPROVE</span><b>Hỏi người khi rủi ro tăng</b><p>Mở cửa, rời geofence, ghi hình riêng tư hoặc di chuyển ngoài tầm nhìn.</p></article>
+            <article><span>AUDIT</span><b>Lưu nguyên nhân</b><p>Goal, quan sát tóm tắt, tool đề xuất, quyết định safety và kết quả thực thi.</p></article>
+          </div>
+          <div class="callout danger"><b>Prompt injection là rủi ro vật lý</b><p>Văn bản nhìn thấy trong camera/web không được phép tự cấp quyền. System policy và Safety Gate phải thắng mọi chỉ dẫn trong môi trường.</p></div>
+          <p><a class="text-link" href="examples/RobotTools.swift">Mở `RobotTools.swift` — mẫu Safety Gate trên iOS →</a></p>
+        </article>
+
+        <article class="lesson" id="lesson-10" data-title="VLA BitVLA CoreAI robot arm imitation learning ACT 7 DoF iPhone">
+          <header class="lesson-header">
+            <div><span>BÀI 10 · NHÁNH NÂNG CAO</span><h2>VLA và cánh tay robot: cùng iPhone, bài toán khác</h2></div>
+            <label class="complete"><input class="lesson-check" data-lesson="10" type="checkbox"> <span>Đã hoàn thành</span></label>
+          </header>
+          <div class="compare-panel">
+            <div><span>ROBOT 2WD</span><b>Navigation action</b><p>Goal (x,z), vận tốc tuyến tính v, vận tốc góc ω.</p><small>Bản đồ + tránh vật cản là trung tâm.</small></div>
+            <div class="versus">≠</div>
+            <div><span>ROBOT ARM</span><b>7-DoF action</b><p>Δx, Δy, Δz, Δroll, Δpitch, Δyaw, gripper.</p><small>Pose end-effector + va chạm là trung tâm.</small></div>
+          </div>
+          <ol class="steps">
+            <li><b>Teleoperate bằng pose iPhone.</b><p>ARKit gửi pose 6DoF, server giải inverse kinematics; đây là ý tưởng chính của `trzy/robot-arm`.</p></li>
+            <li><b>Thu demonstration.</b><p>Đồng bộ camera + joint angles theo frame, ghi episode và loại dữ liệu lỗi.</p></li>
+            <li><b>Huấn luyện / suy luận policy.</b><p>ACT dự đoán chuỗi joint target; VLA nhận ảnh + chỉ dẫn và dự đoán action token.</p></li>
+            <li><b>Giữ safety controller riêng.</b><p>Joint limit, collision, torque/current limit và E-stop không được giao cho policy học máy.</p></li>
+          </ol>
+          <div class="callout info"><b>BitVLA-CoreAI hiện làm được gì?</b><p>Model card mô tả bản chuyển đổi VLA 1,58-bit chạy on-device và dự đoán hành động end-effector 7-DoF. Đây là hướng thao tác robot đầy hứa hẹn, không phải mô-đun thay thẳng cho navigation của đế hai bánh.</p></div>
+        </article>
+
+        <article class="lesson" id="lesson-11" data-title="Kiểm thử validation test bench field safety release checklist nâng cấp">
+          <header class="lesson-header">
+            <div><span>BÀI 11 · 60 PHÚT</span><h2>Thang kiểm thử: chỉ leo khi tầng dưới đã xanh</h2></div>
+            <label class="complete"><input class="lesson-check" data-lesson="11" type="checkbox"> <span>Đã hoàn thành</span></label>
+          </header>
+          <div class="test-ladder">
+            <div><span>L0</span><b>Không motor</b><p>Protocol parser, sequence, timeout, state transition.</p></div>
+            <div><span>L1</span><b>Bánh kê cao</b><p>Chiều quay, clamp, STOP, E-stop, mất BLE.</p></div>
+            <div><span>L2</span><b>Sàn trống</b><p>Manual 10–20%, log pose, đo stopping distance.</p></div>
+            <div><span>L3</span><b>Goal ngắn</b><p>0,5 m, một lần quay, vật cản mềm, người giám sát.</p></div>
+            <div><span>L4</span><b>Teleop</b><p>Jitter, tab nền, rớt mạng, gói cũ và reconnect.</p></div>
+            <div><span>L5</span><b>LLM</b><p>Chỉ sau khi deterministic stack vượt L0–L4.</p></div>
+          </div>
+          <h3 id="safety">Checklist xuất xưởng bản DIY</h3>
+          <div class="release-checklist">
+            <label><input type="checkbox"> E-stop cắt nguồn motor, đã thử dưới tải thấp</label>
+            <label><input type="checkbox"> Mất BLE/WebRTC/app active đều dừng trong ngưỡng</label>
+            <label><input type="checkbox"> Driver và dây không quá nhiệt ở tải thử</label>
+            <label><input type="checkbox"> Robot không đi vào vùng unknown/cầu thang</label>
+            <label><input type="checkbox"> Manual STOP ưu tiên hơn mọi tool call</label>
+            <label><input type="checkbox"> API key nằm trong Keychain/server, không commit lên GitHub</label>
+            <label><input type="checkbox"> Camera/microphone có thông báo và vùng riêng tư</label>
+            <label><input type="checkbox"> Nhật ký đủ để tái hiện một lệnh chuyển động</label>
+          </div>
+          <div class="next-steps"><b>Mở rộng sau bản v1</b><span>Encoders</span><span>Depth fusion</span><span>Nav mesh</span><span>Dock sạc</span><span>Local VLM</span><span>Robot arm</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section source-section" id="references">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div><p class="kicker">BẢN ĐỒ NGUỒN MỞ</p><h2>10 dự án, 10 mảnh ghép—không phải 10 bản sao</h2></div>
+          <p>Mỗi thẻ ghi rõ thứ nên học và ranh giới kỹ thuật. Hãy đọc README, issue và giấy phép upstream trước khi tái sử dụng mã.</p>
+        </div>
+        <div class="source-grid">
+          <a href="https://github.com/trzy/RoBart"><span>01 · INTEGRATION</span><b>trzy / RoBart</b><p>iPhone Pro, ARKit, BLE, đế di động, LLM và WebRTC teleop.</p><small>Core reference ↗</small></a>
+          <a href="https://github.com/trzy/robot-arm"><span>02 · MANIPULATION</span><b>trzy / robot-arm</b><p>Teleop pose bằng iPhone, dataset, ACT imitation learning.</p><small>Arm branch ↗</small></a>
+          <a href="https://github.com/rotbit/chatgpt-robot"><span>03 · VOICE INGRESS</span><b>rotbit / chatgpt-robot</b><p>Siri và Shortcuts làm cổng lệnh hội thoại.</p><small>Not navigation ↗</small></a>
+          <a href="https://github.com/AI-in-hindsight/gpt-embodiment-robot"><span>04 · EMBODIMENT</span><b>gpt-embodiment-robot</b><p>Khung iPhone + MacBook + Arduino + GPT API, tài liệu tối giản.</p><small>Audit first ↗</small></a>
+          <a href="https://github.com/rounak/PhoneAgent"><span>05 · AGENT LOOP</span><b>rounak / PhoneAgent</b><p>SwiftUI, XCTest/RPC, Responses API và mobile automation.</p><small>UI automation ↗</small></a>
+          <a href="https://github.com/claude-world/agentOS"><span>06 · AGENT HOST</span><b>claude-world / agentOS</b><p>iPhone agent host, tool-use, approval hook và Keychain.</p><small>General agent OS ↗</small></a>
+          <a href="https://github.com/mobile-next/mobile-mcp"><span>07 · MCP</span><b>mobile-next / mobile-mcp</b><p>API thống nhất để agent thao tác iOS/Android thật hoặc giả lập.</p><small>Device UI layer ↗</small></a>
+          <a href="https://github.com/ShawnPana/phone-harness"><span>08 · MIRRORING</span><b>ShawnPana / phone-harness</b><p>iPhone Mirroring, OCR và HID, không jailbreak.</p><small>Mac bridge ↗</small></a>
+          <a href="https://huggingface.co/mlboydaisuke/BitVLA-CoreAI"><span>09 · ON-DEVICE VLA</span><b>BitVLA-CoreAI</b><p>Ảnh + chỉ dẫn → action end-effector 7-DoF trên iPhone.</p><small>Manipulation policy ↗</small></a>
+          <a href="https://github.com/GT-RIPL/Awesome-LLM-Robotics"><span>10 · RESEARCH MAP</span><b>Awesome LLM Robotics</b><p>Danh mục reasoning, planning, navigation, manipulation và safety.</p><small>Paper index ↗</small></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell quiz-section" id="quiz">
+      <div class="quiz-intro"><p class="kicker">TỰ KIỂM TRA</p><h2>Bạn đã sẵn sàng bật bánh xe?</h2><p>Chọn đáp án đúng. Cần đạt 5/5 trước khi chuyển từ bench test sang sàn.</p><div class="score" id="quizScore"><b>—</b><span>/ 5</span></div></div>
+      <form id="quizForm" class="quiz-form">
+        <fieldset data-answer="b"><legend>1. Thành phần nào được phép gửi PWM trực tiếp?</legend><label><input type="radio" name="q1" value="a"> LLM</label><label><input type="radio" name="q1" value="b"> MCU sau Safety Gate</label><label><input type="radio" name="q1" value="c"> Trình duyệt operator</label></fieldset>
+        <fieldset data-answer="c"><legend>2. Khi mất gói điều khiển, hành vi mặc định là gì?</legend><label><input type="radio" name="q2" value="a"> Giữ lệnh cuối</label><label><input type="radio" name="q2" value="b"> Chờ LLM</label><label><input type="radio" name="q2" value="c"> Dừng và hủy ARM</label></fieldset>
+        <fieldset data-answer="a"><legend>3. `phone-harness` chủ yếu cung cấp lớp nào?</legend><label><input type="radio" name="q3" value="a"> Tự động hóa UI iPhone qua Mac</label><label><input type="radio" name="q3" value="b"> Driver động cơ</label><label><input type="radio" name="q3" value="c"> SLAM cho robot</label></fieldset>
+        <fieldset data-answer="b"><legend>4. Khi ARKit tracking bị limited, robot nên?</legend><label><input type="radio" name="q4" value="a"> Tăng tốc để thoát</label><label><input type="radio" name="q4" value="b"> Hạ tốc hoặc dừng</label><label><input type="radio" name="q4" value="c"> Bỏ qua pose</label></fieldset>
+        <fieldset data-answer="c"><legend>5. BitVLA-CoreAI dự đoán dạng hành động nào?</legend><label><input type="radio" name="q5" value="a"> Đường đi 2D hoàn chỉnh</label><label><input type="radio" name="q5" value="b"> PWM trái/phải</label><label><input type="radio" name="q5" value="c"> End-effector 7-DoF</label></fieldset>
+        <button class="button primary" type="submit">Chấm bài</button>
+        <p id="quizFeedback" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="final-cta">
+      <div class="shell">
+        <div><p class="kicker">BẮT ĐẦU NHỎ · ĐO ĐƯỢC · AN TOÀN</p><h2>Robot đầu tiên không cần thông minh.<br>Nó cần biết dừng đúng lúc.</h2></div>
+        <div><a class="button light" href="#lesson-0">Học từ bài 0 →</a><a class="button ghost" href="https://github.com/Base27-CVNSS/bilaOS-robot">Fork trên GitHub ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-grid">
+      <div class="footer-brand"><img src="assets/logo.svg" alt="" width="46" height="46"><div><b>BilaOS Robot</b><p>Sổ tay DIY iPhone × Robotics × LLM</p></div></div>
+      <div><b>Tài liệu</b><a href="#roadmap">Lộ trình</a><a href="#architecture">Kiến trúc</a><a href="#references">Nguồn mở</a></div>
+      <div><b>Dự án</b><a href="https://github.com/Base27-CVNSS/bilaOS-robot#readme">README</a><a href="LICENSE">MIT License</a><a href="https://github.com/Base27-CVNSS/bilaOS-robot/issues">Báo lỗi</a></div>
+      <div><b>Nguyên tắc</b><p>Human-in-the-loop<br>Local-first<br>Fail-closed</p></div>
+    </div>
+    <div class="shell footer-bottom"><span>© 2026 Long Ngo · MIT License</span><span>Không phải hệ thống an toàn chức năng hay thiết bị thương mại.</span></div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
