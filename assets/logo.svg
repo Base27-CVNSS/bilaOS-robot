@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">BilaOS Robot</title>
+  <desc id="desc">Biểu trưng robot với iPhone làm bộ não</desc>
+  <defs>
+    <linearGradient id="g" x1="16" y1="8" x2="112" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#20d3a3"/>
+      <stop offset="1" stop-color="#0b6bcb"/>
+    </linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#00152e" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="32" fill="#07111f"/>
+  <path d="M43 27c0-6.1 4.9-11 11-11h20c6.1 0 11 4.9 11 11v43c0 6.1-4.9 11-11 11H54c-6.1 0-11-4.9-11-11V27Z" fill="url(#g)" filter="url(#s)"/>
+  <rect x="48" y="22" width="32" height="52" rx="7" fill="#eef8ff"/>
+  <rect x="58" y="18.5" width="12" height="2.5" rx="1.25" fill="#07111f" opacity=".7"/>
+  <circle cx="58" cy="45" r="4" fill="#07111f"/>
+  <circle cx="70" cy="45" r="4" fill="#07111f"/>
+  <path d="M57 57c4.5 4 9.5 4 14 0" fill="none" stroke="#0b6bcb" stroke-width="3" stroke-linecap="round"/>
+  <path d="M34 82h60l12 22H22l12-22Z" fill="#e9f4ff" stroke="url(#g)" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="35" cy="105" r="12" fill="#07111f" stroke="#20d3a3" stroke-width="6"/>
+  <circle cx="93" cy="105" r="12" fill="#07111f" stroke="#20d3a3" stroke-width="6"/>
+  <path d="M64 81v18M53 90h22" stroke="#0b6bcb" stroke-width="5" stroke-linecap="round"/>
+</svg>
