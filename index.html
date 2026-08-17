@@ -53,7 +53,7 @@
   </header>
 
   <div class="search-panel" id="searchPanel" hidden>
-    <label for="courseSearch">Tìm nhanh trong 12 bài học</label>
+    <label for="courseSearch">Tìm nhanh trong 14 bài học</label>
     <div class="search-row">
       <input id="courseSearch" type="search" placeholder="Ví dụ: BLE, ARKit, WebRTC, watchdog…" autocomplete="off">
       <button id="closeSearch" type="button">Đóng</button>
@@ -69,12 +69,12 @@
         <p class="hero-lead">Một sổ tay “nấu ăn” từng bước để xây robot tự hành có thể nhìn, nghe, lập bản đồ, nhận nhiệm vụ bằng ngôn ngữ tự nhiên và điều khiển từ xa—mà vẫn giữ an toàn chuyển động ngoài quyền quyết định trực tiếp của LLM.</p>
         <div class="hero-actions">
           <a class="button primary" href="#lesson-0">Bắt đầu bài 0 <span>→</span></a>
-          <a class="button secondary" href="#roadmap">Xem lộ trình 12 bài</a>
+          <a class="button secondary" href="#roadmap">Xem lộ trình 14 bài</a>
         </div>
         <div class="hero-facts" aria-label="Thông tin khóa học">
-          <div><strong>12</strong><span>bài thực hành</span></div>
+          <div><strong>14</strong><span>bài thực hành</span></div>
           <div><strong>03</strong><span>cấu hình DIY</span></div>
-          <div><strong>10</strong><span>nguồn mở</span></div>
+          <div><strong>30</strong><span>nguồn đã lọc</span></div>
           <div><strong>0₫</strong><span>học &amp; tải mã</span></div>
         </div>
       </div>
@@ -118,7 +118,7 @@
           <h2>Từ hộp linh kiện đến nhiệm vụ tự hành</h2>
         </div>
         <div class="progress-card">
-          <div><span>Tiến độ của bạn</span><b id="progressText">0/12 bài</b></div>
+          <div><span>Tiến độ của bạn</span><b id="progressText">0/14 bài</b></div>
           <div class="progress-track"><i id="progressBar"></i></div>
           <button id="resetProgress" type="button">Đặt lại</button>
         </div>
@@ -135,8 +135,10 @@
         <article><span>07</span><b>Navigation</b><p>Goal → planner → trajectory → feedback.</p></article>
         <article><span>08</span><b>Teleoperation</b><p>WebRTC, dead-man và đường dừng ưu tiên.</p></article>
         <article><span>09</span><b>LLM tools</b><p>Ý định cấp cao, allow-list và approval.</p></article>
-        <article><span>10</span><b>VLA / cánh tay</b><p>Imitation learning và hành động 7-DoF.</p></article>
-        <article><span>11</span><b>Kiểm định</b><p>Test theo tầng trước khi chạy nhiệm vụ thật.</p></article>
+        <article><span>10</span><b>AI cục bộ</b><p>Chọn LLM/VLM/VLA, đo RAM, latency và nhiệt.</p></article>
+        <article><span>11</span><b>Agent bridge</b><p>Native, WDA, Mirroring, MCP hay robot runtime.</p></article>
+        <article><span>12</span><b>VLA / cánh tay</b><p>Imitation learning và hành động 7-DoF.</p></article>
+        <article><span>13</span><b>Kiểm định</b><p>Test theo tầng trước khi chạy nhiệm vụ thật.</p></article>
       </div>
     </section>
 
@@ -181,7 +183,7 @@
     <section class="course-shell shell" id="course">
       <aside class="course-nav" aria-label="Mục lục bài học">
         <div class="course-nav-head">
-          <span>NỘI DUNG</span><b>12 bài</b>
+          <span>NỘI DUNG</span><b>14 bài</b>
         </div>
         <ol>
           <li><a href="#lesson-0"><span>00</span> Hiểu đúng bài toán</a></li>
@@ -194,8 +196,10 @@
           <li><a href="#lesson-7"><span>07</span> Navigation</a></li>
           <li><a href="#lesson-8"><span>08</span> Điều khiển từ xa</a></li>
           <li><a href="#lesson-9"><span>09</span> LLM/VLM tools</a></li>
-          <li><a href="#lesson-10"><span>10</span> VLA &amp; robot arm</a></li>
-          <li><a href="#lesson-11"><span>11</span> Kiểm thử &amp; nâng cấp</a></li>
+          <li><a href="#lesson-10"><span>10</span> AI cục bộ trên iPhone</a></li>
+          <li><a href="#lesson-11"><span>11</span> Agent bridge &amp; runtime</a></li>
+          <li><a href="#lesson-12"><span>12</span> VLA &amp; robot arm</a></li>
+          <li><a href="#lesson-13"><span>13</span> Kiểm thử &amp; nâng cấp</a></li>
         </ol>
         <div class="nav-help"><b>Quy tắc vàng</b><p>Nếu bạn chưa chứng minh robot tự dừng khi mất kết nối, chưa được phép bật chế độ tự hành.</p></div>
       </aside>
@@ -206,7 +210,7 @@
             <div><span>BÀI 00 · 15 PHÚT</span><h2>Hiểu đúng thứ bạn đang xây</h2></div>
             <label class="complete"><input class="lesson-check" data-lesson="0" type="checkbox"> <span>Đã hoàn thành</span></label>
           </header>
-          <p class="lesson-lead">Danh sách 10 nguồn không phải 10 robot tự hành hoàn chỉnh. Chúng tạo thành một “hộp linh kiện tri thức” cho nhiều lớp khác nhau.</p>
+          <p class="lesson-lead">Danh sách 30 nguồn không phải 30 robot tự hành hoàn chỉnh. Chúng tạo thành một “hộp linh kiện tri thức” cho nhiều lớp khác nhau.</p>
           <div class="definition-grid">
             <div><b>Teleoperation</b><p>Người lái gửi lệnh, robot phản hồi. WebRTC RoBart là ví dụ đúng lớp này.</p></div>
             <div><b>Autonomy</b><p>Robot ước lượng vị trí, lập bản đồ, lập đường và tự bám đường tới mục tiêu.</p></div>
@@ -431,10 +435,106 @@ for segment in path.chunk(maxLength: 0.5):
           <p><a class="text-link" href="examples/RobotTools.swift">Mở `RobotTools.swift` — mẫu Safety Gate trên iOS →</a></p>
         </article>
 
-        <article class="lesson" id="lesson-10" data-title="VLA BitVLA CoreAI robot arm imitation learning ACT 7 DoF iPhone">
+        <article class="lesson" id="lesson-10" data-title="AI cục bộ iPhone PhoneClaw Gemma Youtu LLM CoreAI VLM VLA offline">
           <header class="lesson-header">
-            <div><span>BÀI 10 · NHÁNH NÂNG CAO</span><h2>VLA và cánh tay robot: cùng iPhone, bài toán khác</h2></div>
+            <div><span>BÀI 10 · 120 PHÚT</span><h2>AI cục bộ trên iPhone: chọn đúng loại mô hình</h2></div>
             <label class="complete"><input class="lesson-check" data-lesson="10" type="checkbox"> <span>Đã hoàn thành</span></label>
+          </header>
+          <p class="lesson-lead">“Chạy trên iPhone” chưa nói lên mô hình làm việc gì. Planner ngôn ngữ, vision detector và VLA policy có input/output, nhịp chạy và vùng an toàn hoàn toàn khác nhau.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Vai trò</th><th>Input → output</th><th>Nguồn học</th><th>Đặt ở đâu</th></tr></thead>
+              <tbody>
+                <tr><td>🧠 LLM planner</td><td>Goal + trạng thái → tool call</td><td>PhoneClaw, Youtu-LLM, agentOS</td><td>Ngoài vòng điều khiển motor</td></tr>
+                <tr><td>👁️ Vision model</td><td>Camera → object/depth/label</td><td>RealTimeAICam, VisionBuilder</td><td>Perception pipeline</td></tr>
+                <tr><td>🦾 VLA policy</td><td>Ảnh + instruction → action 7-DoF</td><td>BitVLA-CoreAI</td><td>Nhánh manipulation</td></tr>
+                <tr><td>🛡️ Safety runtime</td><td>Intent + context → allow/deny</td><td>BilaOS Safety Gate</td><td>Deterministic, luôn cục bộ</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Công thức triển khai 7 bước</h3>
+          <ol class="steps">
+            <li><b>Chốt nhiệm vụ trước model.</b><p>Ví dụ planner chỉ chọn một trong 5 tools; detector chỉ cần nhận người/cầu thang; không bắt một model làm mọi thứ.</p></li>
+            <li><b>Lập ngân sách thiết bị.</b><p>Ghi chip, RAM khả dụng, dung lượng model, OS/toolchain và quyền tăng giới hạn bộ nhớ nếu runtime yêu cầu.</p></li>
+            <li><b>Xây app shell không model.</b><p>Camera, BLE, state machine, STOP và mock tool phải chạy độc lập; model chỉ cắm vào protocol đã ổn định.</p></li>
+            <li><b>Tải model có kiểm soát.</b><p>Không commit trọng số lớn; kiểm checksum/nguồn, license và khả năng phân phối trước khi đóng gói.</p></li>
+            <li><b>Benchmark trên máy thật.</b><p>Đo cold load, warm latency, peak memory, battery drain, nhiệt sau 15 phút và tỷ lệ tool call hợp lệ.</p></li>
+            <li><b>Thử airplane mode.</b><p>Xác nhận không có fallback cloud âm thầm; khóa mạng và kiểm log để chứng minh pipeline thực sự cục bộ.</p></li>
+            <li><b>Gắn qua adapter.</b><p>Model trả structured intent; Safety Gate type-check, clamp và có quyền từ chối trước khi RobotLink nhìn thấy lệnh.</p></li>
+          </ol>
+          <div class="code-window">
+            <div class="code-title"><span><i></i><i></i><i></i> PHONECLAW · APP SHELL THAM KHẢO</span><button class="copy-button" type="button">Sao chép</button></div>
+            <pre><code>git clone https://github.com/gclsoft/PhoneClaw.git
+cd PhoneClaw
+pod install
+open PhoneClaw.xcworkspace
+
+# Trong Xcode:
+# 1. Chọn Team + Bundle ID riêng
+# 2. Cài app shell lên iPhone
+# 3. Tải model từ màn hình Model Settings
+# 4. Chạy benchmark khi chưa nối robot</code></pre>
+          </div>
+          <div class="test-grid">
+            <article><b>Cold load</b><p>Từ lúc mở app đến khi model nhận prompt đầu tiên.</p></article>
+            <article><b>Warm action</b><p>Từ frame/trạng thái tới JSON tool call hợp lệ.</p></article>
+            <article><b>Thermal soak</b><p>Chạy liên tục 15 phút; theo dõi throttling và pin.</p></article>
+            <article><b>Offline proof</b><p>Airplane mode, không Wi‑Fi, không provider fallback.</p></article>
+          </div>
+          <div class="callout warning"><b>Core AI artifact không phải Core ML “kéo-thả” chung cho mọi iPhone</b><p>BitVLA/Youtu CoreAI có artifact, kernel và yêu cầu toolchain/thiết bị riêng. Luôn theo model card hiện hành và biên dịch lại đúng architecture; không hứa hiệu năng trên thiết bị chưa đo.</p></div>
+        </article>
+
+        <article class="lesson" id="lesson-11" data-title="Agent bridge runtime native iOS WDA WebDriverAgent iPhone Mirroring MCP OpenCastor CommandAGI">
+          <header class="lesson-header">
+            <div><span>BÀI 11 · 120 PHÚT</span><h2>Chọn cầu nối: native, WDA, Mirroring, MCP hay robot runtime?</h2></div>
+            <label class="complete"><input class="lesson-check" data-lesson="11" type="checkbox"> <span>Đã hoàn thành</span></label>
+          </header>
+          <p class="lesson-lead">Các framework điều khiển màn hình iPhone rất hữu ích để test, thao tác app và làm agent UI—nhưng chỉ native app mới truy cập ARKit/BLE theo kiến trúc robot lõi. Đừng ghép hai lớp bằng một lời hứa mơ hồ.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Đường kết nối</th><th>Thấy / làm được</th><th>Phù hợp</th><th>Không dùng cho</th></tr></thead>
+              <tbody>
+                <tr><td>📱 Native Swift</td><td>ARKit, camera, BLE, audio, app state</td><td>Robot core bắt buộc</td><td>Tự động hóa app bên thứ ba</td></tr>
+                <tr><td>🧪 WDA / XCTest</td><td>Accessibility tree, screenshot, tap/type</td><td>PhoneAgent, Ghost, Mobilerun, AutoGLM</td><td>Vòng PWM/PID thời gian thực</td></tr>
+                <tr><td>🪞 iPhone Mirroring</td><td>Ảnh cửa sổ + OCR/vision + input</td><td>phone-harness, GUIWeave</td><td>ARKit pose và BLE native</td></tr>
+                <tr><td>🔌 MCP</td><td>Chuẩn hóa tool cho agent client</td><td>mobile-mcp, Ghost adapters</td><td>Thay Safety Gate</td></tr>
+                <tr><td>🌐 Robot runtime</td><td>Camera/action bridge, driver, fleet/audit</td><td>CommandAGI, OpenCastor</td><td>Bypass local E-stop/watchdog</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Quy trình tích hợp một bridge mới</h3>
+          <ol class="steps">
+            <li><b>Viết capability manifest.</b><p>Liệt kê `observe`, `tap`, `camera`, `drive`, `stop`; đánh dấu platform, quyền, latency và việc có side effect hay không.</p></li>
+            <li><b>Chạy smoke test không motor.</b><p>Đọc state/screenshot, gửi một action vô hại, xác minh kết quả và giới hạn timeout.</p></li>
+            <li><b>Chuẩn hóa adapter.</b><p>Mọi nguồn lệnh—web, MCP, LLM, runtime—phải chuyển thành cùng `RobotIntent`; không adapter nào được chạm GPIO/PWM.</p></li>
+            <li><b>Đặt trust boundary.</b><p>WDA/Mirroring ở Mac; cloud bridge ở Internet; BLE ở gần robot. Mỗi biên có auth, freshness và audit riêng.</p></li>
+            <li><b>Tiêm lỗi.</b><p>Kill process, khóa iPhone, ẩn Mirroring, rút cáp, làm trễ 2 giây và replay gói; kết quả hợp lệ duy nhất là STOP.</p></li>
+            <li><b>Mở quyền dần.</b><p>Bắt đầu `observe + stop`, sau đó rotate tại chỗ, rồi drive ngắn; chức năng rủi ro cao cần operator approval.</p></li>
+          </ol>
+          <div class="code-window">
+            <div class="code-title"><span><i></i><i></i><i></i> CANONICAL ROBOT ADAPTER</span><button class="copy-button" type="button">Sao chép</button></div>
+            <pre><code>{
+  "protocol": "bilaos-adapter/1",
+  "capabilities": ["observe", "rotate", "drive", "stop"],
+  "intent": {
+    "id": "01J...",
+    "type": "drive",
+    "args": {"distance_m": 0.5, "max_speed_mps": 0.2},
+    "issued_at_ms": 1786971600000,
+    "expires_in_ms": 500
+  }
+}
+
+# Adapter → RobotCoordinator → SafetyGate → RobotLink → MotorGuard
+# Không có đường tắt từ MCP/cloud/WDA đến motor.</code></pre>
+          </div>
+          <div class="callout info"><b>Dùng CommandAGI/OpenCastor như lớp ngoài, không như firmware</b><p>CommandAGI BYO Robot minh họa `camera()` + `on_action()`; OpenCastor minh họa gateway/driver/fleet. Với BilaOS, callback action vẫn phải gọi `RobotCoordinator` và chịu cùng geofence, TTL, approval và E-stop như lệnh local.</p></div>
+        </article>
+
+        <article class="lesson" id="lesson-12" data-title="VLA BitVLA CoreAI robot arm imitation learning ACT 7 DoF iPhone">
+          <header class="lesson-header">
+            <div><span>BÀI 12 · NHÁNH NÂNG CAO</span><h2>VLA và cánh tay robot: cùng iPhone, bài toán khác</h2></div>
+            <label class="complete"><input class="lesson-check" data-lesson="12" type="checkbox"> <span>Đã hoàn thành</span></label>
           </header>
           <div class="compare-panel">
             <div><span>ROBOT 2WD</span><b>Navigation action</b><p>Goal (x,z), vận tốc tuyến tính v, vận tốc góc ω.</p><small>Bản đồ + tránh vật cản là trung tâm.</small></div>
@@ -450,10 +550,10 @@ for segment in path.chunk(maxLength: 0.5):
           <div class="callout info"><b>BitVLA-CoreAI hiện làm được gì?</b><p>Model card mô tả bản chuyển đổi VLA 1,58-bit chạy on-device và dự đoán hành động end-effector 7-DoF. Đây là hướng thao tác robot đầy hứa hẹn, không phải mô-đun thay thẳng cho navigation của đế hai bánh.</p></div>
         </article>
 
-        <article class="lesson" id="lesson-11" data-title="Kiểm thử validation test bench field safety release checklist nâng cấp">
+        <article class="lesson" id="lesson-13" data-title="Kiểm thử validation test bench field safety release checklist nâng cấp">
           <header class="lesson-header">
-            <div><span>BÀI 11 · 60 PHÚT</span><h2>Thang kiểm thử: chỉ leo khi tầng dưới đã xanh</h2></div>
-            <label class="complete"><input class="lesson-check" data-lesson="11" type="checkbox"> <span>Đã hoàn thành</span></label>
+            <div><span>BÀI 13 · 60 PHÚT</span><h2>Thang kiểm thử: chỉ leo khi tầng dưới đã xanh</h2></div>
+            <label class="complete"><input class="lesson-check" data-lesson="13" type="checkbox"> <span>Đã hoàn thành</span></label>
           </header>
           <div class="test-ladder">
             <div><span>L0</span><b>Không motor</b><p>Protocol parser, sequence, timeout, state transition.</p></div>
@@ -482,21 +582,54 @@ for segment in path.chunk(maxLength: 0.5):
     <section class="section source-section" id="references">
       <div class="shell">
         <div class="section-heading split-heading">
-          <div><p class="kicker">BẢN ĐỒ NGUỒN MỞ</p><h2>10 dự án, 10 mảnh ghép—không phải 10 bản sao</h2></div>
-          <p>Mỗi thẻ ghi rõ thứ nên học và ranh giới kỹ thuật. Hãy đọc README, issue và giấy phép upstream trước khi tái sử dụng mã.</p>
+          <div><p class="kicker">BẢN ĐỒ NGUỒN MỞ</p><h2>30 nguồn đã lọc, xếp đúng lớp kiến trúc</h2></div>
+          <p>URL đã được chuẩn hóa, nguồn trùng được gộp, link hồ sơ chung được thay bằng repo kỹ thuật cụ thể. Mỗi nguồn là một mảnh ghép—không phải 30 robot chạy ngay.</p>
+        </div>
+        <div class="source-filters" aria-label="Lọc nguồn tham khảo">
+          <button class="active" type="button" data-source-filter="all" aria-pressed="true">Tất cả · 30</button>
+          <button type="button" data-source-filter="core" aria-pressed="false">Robot lõi · 6</button>
+          <button type="button" data-source-filter="bridge" aria-pressed="false">iPhone bridge · 9</button>
+          <button type="button" data-source-filter="local" aria-pressed="false">AI cục bộ · 8</button>
+          <button type="button" data-source-filter="runtime" aria-pressed="false">Runtime · 3</button>
+          <button type="button" data-source-filter="history" aria-pressed="false">Lịch sử · 4</button>
         </div>
         <div class="source-grid">
-          <a href="https://github.com/trzy/RoBart"><span>01 · INTEGRATION</span><b>trzy / RoBart</b><p>iPhone Pro, ARKit, BLE, đế di động, LLM và WebRTC teleop.</p><small>Core reference ↗</small></a>
-          <a href="https://github.com/trzy/robot-arm"><span>02 · MANIPULATION</span><b>trzy / robot-arm</b><p>Teleop pose bằng iPhone, dataset, ACT imitation learning.</p><small>Arm branch ↗</small></a>
-          <a href="https://github.com/rotbit/chatgpt-robot"><span>03 · VOICE INGRESS</span><b>rotbit / chatgpt-robot</b><p>Siri và Shortcuts làm cổng lệnh hội thoại.</p><small>Not navigation ↗</small></a>
-          <a href="https://github.com/AI-in-hindsight/gpt-embodiment-robot"><span>04 · EMBODIMENT</span><b>gpt-embodiment-robot</b><p>Khung iPhone + MacBook + Arduino + GPT API, tài liệu tối giản.</p><small>Audit first ↗</small></a>
-          <a href="https://github.com/rounak/PhoneAgent"><span>05 · AGENT LOOP</span><b>rounak / PhoneAgent</b><p>SwiftUI, XCTest/RPC, Responses API và mobile automation.</p><small>UI automation ↗</small></a>
-          <a href="https://github.com/claude-world/agentOS"><span>06 · AGENT HOST</span><b>claude-world / agentOS</b><p>iPhone agent host, tool-use, approval hook và Keychain.</p><small>General agent OS ↗</small></a>
-          <a href="https://github.com/mobile-next/mobile-mcp"><span>07 · MCP</span><b>mobile-next / mobile-mcp</b><p>API thống nhất để agent thao tác iOS/Android thật hoặc giả lập.</p><small>Device UI layer ↗</small></a>
-          <a href="https://github.com/ShawnPana/phone-harness"><span>08 · MIRRORING</span><b>ShawnPana / phone-harness</b><p>iPhone Mirroring, OCR và HID, không jailbreak.</p><small>Mac bridge ↗</small></a>
-          <a href="https://huggingface.co/mlboydaisuke/BitVLA-CoreAI"><span>09 · ON-DEVICE VLA</span><b>BitVLA-CoreAI</b><p>Ảnh + chỉ dẫn → action end-effector 7-DoF trên iPhone.</p><small>Manipulation policy ↗</small></a>
-          <a href="https://github.com/GT-RIPL/Awesome-LLM-Robotics"><span>10 · RESEARCH MAP</span><b>Awesome LLM Robotics</b><p>Danh mục reasoning, planning, navigation, manipulation và safety.</p><small>Paper index ↗</small></a>
+          <a data-category="core" href="https://github.com/trzy/RoBart"><span>01 · CORE INTEGRATION</span><b>trzy / RoBart</b><p>iPhone Pro, ARKit, BLE, mobile base, LLM và WebRTC teleop.</p><small>Robot lõi ↗</small></a>
+          <a data-category="core" href="https://github.com/trzy/robot-arm"><span>02 · MANIPULATION</span><b>trzy / robot-arm</b><p>Pose iPhone → IK, demonstration và ACT imitation learning.</p><small>Robot arm ↗</small></a>
+          <a data-category="core" href="https://github.com/CommandAGI/commandagi-example-byo-robot"><span>03 · BYO ROBOT</span><b>CommandAGI example</b><p>Camera callback, action callback và virtual rover realtime.</p><small>Bridge mẫu ↗</small></a>
+          <a data-category="core" href="https://github.com/CommandAGI/commandagi-python"><span>04 · SIMULATION SDK</span><b>CommandAGI Python</b><p>Observe, step, reset và action vocabulary trong world 3D.</p><small>Mô phỏng ↗</small></a>
+          <a data-category="core" href="https://github.com/craigfouts/robotnik"><span>05 · WEBOTS</span><b>craigfouts / robotnik</b><p>Hai robot mô phỏng phối hợp trong warehouse bằng giao diện tri thức.</p><small>Không phải RoBart ↗</small></a>
+          <a data-category="core" href="https://github.com/nicedreamzapp/CemaniHomesteadRobot"><span>06 · FIELD ROBOT</span><b>Cemani Homestead Robot</b><p>Xe xích 1 kW, Jetson, YOLO, LiDAR và điều khiển bằng tin nhắn.</p><small>Chuyên gia · rủi ro cao ↗</small></a>
+
+          <a data-category="bridge" href="https://github.com/rounak/PhoneAgent"><span>07 · XCUITEST RPC</span><b>rounak / PhoneAgent</b><p>SwiftUI agent loop và bridge iOS/Android cho Codex/OpenClaw.</p><small>UI automation ↗</small></a>
+          <a data-category="bridge" href="https://github.com/ghost-in-the-droid/android-agent"><span>08 · WDA / ADB</span><b>Ghost in the Droid</b><p>iOS qua Appium/WDA, Android qua ADB và tool surface đa thiết bị.</p><small>62 MCP tools ↗</small></a>
+          <a data-category="bridge" href="https://github.com/droidrun/mobilerun"><span>09 · MOBILE AGENT</span><b>droidrun / mobilerun</b><p>Inspect UI, screenshot, tap, swipe, type và workflow đa bước.</p><small>iOS + Android ↗</small></a>
+          <a data-category="bridge" href="https://github.com/mobile-next/mobile-mcp"><span>10 · MCP</span><b>mobile-next / mobile-mcp</b><p>Accessibility-first tools cho máy thật, simulator và emulator.</p><small>Device tool layer ↗</small></a>
+          <a data-category="bridge" href="https://github.com/ShawnPana/phone-harness"><span>11 · MIRRORING</span><b>phone-harness</b><p>iPhone Mirroring, Vision OCR và HID, không jailbreak.</p><small>Mac bridge ↗</small></a>
+          <a data-category="bridge" href="https://github.com/hyechow/GUIWeave"><span>12 · GUI AGENT</span><b>hyechow / GUIWeave</b><p>Milestone → act → verify/replan, zero-preempt input trên Mac.</p><small>iphone-use đã đổi tên ↗</small></a>
+          <a data-category="bridge" href="https://github.com/zai-org/Open-AutoGLM"><span>13 · PHONE AGENT</span><b>Open-AutoGLM</b><p>Android/HarmonyOS và nhánh iPhone qua WebDriverAgent.</p><small>Model-driven UI ↗</small></a>
+          <a data-category="bridge" href="https://github.com/rotbit/chatgpt-robot"><span>14 · VOICE INGRESS</span><b>chatgpt-robot</b><p>Siri/Shortcuts làm cổng hội thoại; không có navigation stack.</p><small>Task ingress ↗</small></a>
+          <a data-category="bridge" href="https://github.com/AI-in-hindsight/gpt-embodiment-robot"><span>15 · EMBODIMENT</span><b>gpt-embodiment-robot</b><p>iPhone + MacBook + Arduino + GPT API; tài liệu upstream tối giản.</p><small>Audit first ↗</small></a>
+
+          <a data-category="local" href="https://github.com/gclsoft/PhoneClaw"><span>16 · LOCAL AGENT</span><b>gclsoft / PhoneClaw</b><p>Gemma on-device, file skills và quyền iOS, offline-first.</p><small>Planner host ↗</small></a>
+          <a data-category="local" href="https://github.com/claude-world/agentOS"><span>17 · AGENT HOST</span><b>claude-world / agentOS</b><p>iPhone tool-use, Keychain, approval/privacy hook và MCP HTTP.</p><small>General agent OS ↗</small></a>
+          <a data-category="local" href="https://huggingface.co/mlboydaisuke/BitVLA-CoreAI"><span>18 · ON-DEVICE VLA</span><b>BitVLA-CoreAI</b><p>Ảnh + lệnh → action end-effector 7-DoF trên iPhone.</p><small>Manipulation policy ↗</small></a>
+          <a data-category="local" href="https://huggingface.co/mlboydaisuke/Youtu-LLM-2B-CoreAI"><span>19 · CORE AI LLM</span><b>Youtu-LLM-2B-CoreAI</b><p>LLM 2B có reasoning/tool-use chạy bằng Apple Core AI.</p><small>Local planner ↗</small></a>
+          <a data-category="local" href="https://huggingface.co/tencent/Youtu-LLM-2B"><span>20 · BASE MODEL</span><b>Tencent Youtu-LLM-2B</b><p>Model gốc để hiểu architecture, khả năng và giấy phép.</p><small>Không phải VLA ↗</small></a>
+          <a data-category="local" href="https://github.com/nicedreamzapp/RealTimeAICam"><span>21 · ON-DEVICE VISION</span><b>RealTimeAICam</b><p>YOLO, OCR, LiDAR distance và inference offline trên iPhone.</p><small>Kiểm tra dual-license ↗</small></a>
+          <a data-category="local" href="https://github.com/nicedreamzapp/VisionBuilder"><span>22 · DATA PIPELINE</span><b>VisionBuilder</b><p>Capture, segment, cluster, label và export COCO/YOLO.</p><small>WIP upstream ↗</small></a>
+          <a data-category="local" href="https://arxiv.org/abs/2506.07530"><span>23 · PAPER</span><b>BitVLA paper</b><p>VLA ternary, compression và benchmark cho manipulation.</p><small>Research evidence ↗</small></a>
+
+          <a data-category="runtime" href="https://github.com/craigm26/OpenCastor"><span>24 · ROBOT RUNTIME</span><b>OpenCastor</b><p>Driver abstraction, multi-provider AI, safety, audit và fleet.</p><small>Verify release claims ↗</small></a>
+          <a data-category="runtime" href="https://github.com/craigm26/opencastor-client"><span>25 · FLEET UI</span><b>OpenCastor Client</b><p>Telemetry, consent, audit, chat control và persistent E-stop.</p><small>Cloud-optional pattern ↗</small></a>
+          <a data-category="runtime" href="https://github.com/GT-RIPL/Awesome-LLM-Robotics"><span>26 · RESEARCH MAP</span><b>Awesome LLM Robotics</b><p>Reasoning, planning, navigation, manipulation và safety papers.</p><small>Paper index ↗</small></a>
+
+          <a data-category="history" href="https://hackaday.com/2012/06/09/autonomous-robot-uses-an-iphone-for-its-brain/"><span>27 · 2012</span><b>iPhone for its brain</b><p>iPhone + Arduino + live video + object detection từ giai đoạn sớm.</p><small>Lịch sử kiến trúc ↗</small></a>
+          <a data-category="history" href="https://hackaday.com/2018/07/14/robot-maps-rooms-with-help-from-iphone/"><span>28 · 2018</span><b>Maps rooms with iPhone</b><p>Unity, mapping 3D, manual control và object following.</p><small>Tư liệu Hackaday ↗</small></a>
+          <a data-category="history" href="https://hackaday.com/2021/07/21/giving-control-of-a-smartphone-robot-to-a-raspberry-pi/"><span>29 · 2021</span><b>Romo + Raspberry Pi</b><p>Reverse engineering serial interface và tái sử dụng robot cũ.</p><small>Không có code công bố lúc viết ↗</small></a>
+          <a data-category="history" href="https://news.ycombinator.com/item?id=42246353"><span>30 · DISCUSSION</span><b>RoBart on Hacker News</b><p>Phản biện cộng đồng về chi phí, design và khả năng mở rộng.</p><small>Nguồn thứ cấp ↗</small></a>
         </div>
+        <p class="source-note">Xem bảng đầy đủ về giá trị sử dụng, giới hạn và các URL đã chuẩn hóa trong <a href="https://github.com/Base27-CVNSS/bilaOS-robot/blob/main/SOURCES.md">SOURCES.md →</a></p>
       </div>
     </section>
 
