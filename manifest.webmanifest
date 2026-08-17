@@ -1,0 +1,18 @@
+{
+  "name": "BilaOS Robot — Sổ tay DIY iPhone Robot",
+  "short_name": "BilaOS Robot",
+  "description": "Khóa học tiếng Việt từ A đến Z về robot tự hành dùng iPhone, ARKit, BLE, WebRTC và LLM.",
+  "lang": "vi",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#0b6bcb",
+  "icons": [
+    {
+      "src": "assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
